@@ -2,7 +2,7 @@
 ## Privacy Policy
 
 ### TLDR
-We do not collect, store, share, sell or do anything with your information.
+We do not collect, store, share, sell or do anything with your information.  
 We do not display or push any advertisements, whether targeted or untargeted.
 
 ### Long version
