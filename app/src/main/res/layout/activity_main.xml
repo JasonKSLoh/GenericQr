@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/container_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_request_scan_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/press_scan_to_get_started"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="@dimen/text_result_buttons_general"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/tv_request_scan"
+        android:background="@drawable/rounded_shape_orange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_side"
+        android:padding="@dimen/padding_button_internal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:gravity="center"
+        android:textSize="@dimen/text_result_buttons"
+        android:textColor="@color/results_button_text"
+        android:text="@string/scan"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone"
+        />
+</android.support.constraint.ConstraintLayout>

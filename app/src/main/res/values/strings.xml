@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Generic Qr Scanner</string>
+    <string name="camera_permission_title">Camera Permission</string>
+    <string name="camera_permission_rationale">The Camera permission is required to scan images</string>
+    <string name="settings_page_rationale">You can open the settings page to grant the permissions required</string>
+    <string name="scan">Scan</string>
+    <string name="lorem_ipsum">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit…There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...</string>
+    <string name="copy">Copy</string>
+    <string name="mail">Mail</string>
+    <string name="save_contact">Save Contact</string>
+    <string name="message">Message</string>
+    <string name="call">Call</string>
+    <string name="open_url">Open URL</string>
+    <string name="delete">Delete</string>
+    <string name="all">All</string>
+    <string name="history">History</string>
+    <string name="flash">Flash</string>
+    <string name="press_scan_to_get_started">Press \'Scan\' to get started</string>
+    <string name="ok">OK</string>
+    <string name="not_now">Not Now</string>
+    <string name="search">Search</string>
+    <string name="share_image">Share/Save</string>
+    <string name="about">About</string>
+</resources>

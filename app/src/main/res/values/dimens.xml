@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_top">16dp</dimen>
+    <dimen name="margin_side">16dp</dimen>
+    <dimen name="margin_button_separation">8dp</dimen>
+    <dimen name="padding_button_internal">4dp</dimen>
+    <dimen name="text_result_buttons">24sp</dimen>
+    <dimen name="text_result_buttons_general">24sp</dimen>
+    <dimen name="scan_icon_size">32dp</dimen>
+    <dimen name="overlay_guide_marking_width">4dp</dimen>
+    <dimen name="overlay_guide_marking_length">32dp</dimen>
+    <dimen name="elevation_card">2dp</dimen>
+</resources>

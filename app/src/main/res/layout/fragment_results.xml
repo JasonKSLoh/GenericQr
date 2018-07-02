@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top"
+        android:layout_marginLeft="@dimen/margin_side"
+        android:layout_marginRight="@dimen/margin_side"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:text="QR_CODE : MeCard"/>
+
+    <TextView
+        android:id="@+id/tv_data"
+        android:background="?selectableItemBackground"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/margin_side"
+        android:layout_marginRight="@dimen/margin_side"
+        android:layout_marginTop="@dimen/margin_top"
+        app:layout_constraintTop_toBottomOf="@id/tv_type"
+        app:layout_constraintBottom_toTopOf="@id/container_conditional_results_buttons"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="16sp"
+        android:scrollbars="vertical"
+        tools:text="@string/lorem_ipsum"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/container_conditional_results_buttons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_data"
+        app:layout_constraintBottom_toTopOf="@id/container_permanent_results_buttons"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/btn_email"
+            android:background="@drawable/rounded_shape_orange"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_button_separation"
+            android:padding="@dimen/padding_button_internal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:gravity="center"
+            android:textSize="@dimen/text_result_buttons_general"
+            android:textColor="@color/results_button_text"
+            android:text="@string/mail"
+            android:clickable="true"
+            android:focusable="true"
+            />
+
+        <TextView
+            android:id="@+id/btn_url"
+            android:background="@drawable/rounded_shape_orange"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_button_separation"
+            android:padding="@dimen/padding_button_internal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:gravity="center"
+            android:textSize="@dimen/text_result_buttons_general"
+            android:textColor="@color/results_button_text"
+            android:text="@string/open_url"
+            android:clickable="true"
+            android:focusable="true"
+            />
+
+        <TextView
+            android:id="@+id/btn_call"
+            android:background="@drawable/rounded_shape_orange"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_button_separation"
+            android:padding="@dimen/padding_button_internal"
+            app:layout_constraintTop_toBottomOf="@id/btn_save_contact"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/btn_message"
+            android:gravity="center"
+            android:textSize="@dimen/text_result_buttons_general"
+            android:textColor="@color/results_button_text"
+            android:text="@string/call"
+            android:clickable="true"
+            android:focusable="true"
+            />
+
+        <TextView
+            android:id="@+id/btn_message"
+            android:background="@drawable/rounded_shape_orange"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_button_separation"
+            android:padding="@dimen/padding_button_internal"
+            app:layout_constraintTop_toTopOf="@id/btn_call"
+            app:layout_constraintBottom_toBottomOf="@id/btn_call"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/btn_call"
+            android:gravity="center"
+            android:textSize="@dimen/text_result_buttons_general"
+            android:textColor="@color/results_button_text"
+            android:text="@string/message"
+            android:clickable="true"
+            android:focusable="true"
+            />
+
+        <TextView
+            android:id="@+id/btn_save_contact"
+            android:background="@drawable/rounded_shape_orange"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_button_separation"
+            android:padding="@dimen/padding_button_internal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/btn_message"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:gravity="center"
+            android:textSize="@dimen/text_result_buttons_general"
+            android:textColor="@color/results_button_text"
+            android:text="@string/save_contact"
+            android:clickable="true"
+            android:focusable="true"
+            />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/container_permanent_results_buttons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/container_conditional_results_buttons"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/btn_copy_clipboard"
+            android:background="@drawable/rounded_shape_green"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_button_separation"
+            android:padding="@dimen/padding_button_internal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/btn_history"
+            android:gravity="center"
+            android:textSize="@dimen/text_result_buttons"
+            android:text="@string/copy"
+            android:textColor="@color/results_button_text"
+            android:clickable="true"
+            android:focusable="true"
+            />
+
+        <TextView
+            android:id="@+id/btn_history"
+            android:background="@drawable/rounded_shape_blue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_button_separation"
+            android:padding="@dimen/padding_button_internal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/btn_copy_clipboard"
+            android:gravity="center"
+            android:textSize="@dimen/text_result_buttons"
+            android:textColor="@color/results_button_text"
+            android:text="@string/history"
+            android:clickable="true"
+            android:focusable="true"
+            />
+
+
+        <TextView
+            android:id="@+id/btn_search"
+            android:background="@drawable/rounded_shape_purple"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_button_separation"
+            android:padding="@dimen/padding_button_internal"
+            app:layout_constraintBottom_toTopOf="@id/btn_copy_clipboard"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/btn_share_img"
+            android:gravity="center"
+            android:textSize="@dimen/text_result_buttons_general"
+            android:textColor="@color/results_button_text"
+            android:text="@string/search"
+            android:clickable="true"
+            android:focusable="true"
+            />
+
+        <TextView
+            android:id="@+id/btn_share_img"
+            android:background="@drawable/rounded_shape_brown"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_button_separation"
+            android:padding="@dimen/padding_button_internal"
+            app:layout_constraintBottom_toTopOf="@id/btn_copy_clipboard"
+            app:layout_constraintLeft_toRightOf="@id/btn_search"
+            app:layout_constraintRight_toRightOf="parent"
+            android:gravity="center"
+            android:textSize="@dimen/text_result_buttons_general"
+            android:textColor="@color/results_button_text"
+            android:text="@string/share_image"
+            android:clickable="true"
+            android:focusable="true"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

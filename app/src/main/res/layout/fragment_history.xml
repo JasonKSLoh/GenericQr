@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="RtlHardcoded"
+    android:background="@color/material_grey_200"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+
+    <android.support.v7.widget.RecyclerView
+        tools:listitem="@layout/item_history"
+        tools:layoutManager="android.support.v7.widget.LinearLayoutManager"
+        tools:orientation="vertical"
+        android:id="@+id/rv_history"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/layout_history_top_bar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layout_history_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/colorPrimary"
+        android:padding="8dp"
+        android:elevation="12dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_history_toolbar_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="8dp"
+            android:textColor="@color/toolbar_text"
+            android:text="@string/history"/>
+
+        <TextView
+            android:id="@+id/tv_history_toolbar_num_items"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/tv_history_toolbar_label"
+            android:textColor="@color/toolbar_text"
+            tools:text=": 5 items"/>
+
+        <TextView
+            android:id="@+id/tv_history_delete_entries"
+            android:drawableLeft="@drawable/ic_delete_24dp"
+            android:background="?selectableItemBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tv_history_select_all"
+            android:layout_marginRight="8dp"
+            android:padding="4dp"
+            android:gravity="center"
+            android:textColor="@color/toolbar_text"
+            android:text="@string/delete"
+            android:clickable="true"
+            android:focusable="true"
+            />
+
+        <TextView
+            android:id="@+id/tv_history_select_all"
+            android:drawableLeft="@drawable/ic_select_all_24dp"
+            android:background="?selectableItemBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:gravity="center"
+            android:layout_marginRight="8dp"
+            android:padding="4dp"
+            android:textColor="@color/toolbar_text"
+            android:text="@string/all"
+            android:clickable="true"
+            android:focusable="true"
+            />
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>
