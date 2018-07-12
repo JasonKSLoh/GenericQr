@@ -42,3 +42,7 @@ This Privacy Policy may be updated from time to time, although it probably will 
 ### Contact Us
 
 If you have any questions or suggestions about my Privacy Policy, do not hesitate to contact me.
+
+## Source Code
+The source code for this app is available on my Github. Check the link at the top of the page.
+
