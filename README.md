@@ -1,4 +1,11 @@
 # Generic QR
+
+## Usage
+* To use the app, point the camera at a barcode and that's it. 
+* If the barcode isn't recognized, try moving the camera closer or further away from the barcode.  
+* On the results page, you can perform actions such as searching the scanned information, adding to contacts, and other contextual actions.  
+* You can view your scan history by selecting "History" from the Scan page or the Results page.  
+
 ## Privacy Policy
 
 ### TLDR
@@ -9,7 +16,7 @@ We do not display or push any advertisements, whether targeted or untargeted.
 
 This App, Generic QR code scanner is provided by at no cost and is intended for use as is.  
 
-This page is used to inform website visitors regarding the policies with the collection, use, and disclosure of Personal Information if anyone decided to use this Service.  
+This page is used to inform users regarding the policies with the collection, use, and disclosure of Personal Information if anyone decided to use this Service.  
 
 If you choose to use this Service, then you agree to the collection and use of information in relation to this policy. Which is to say, you consent to me not collecting any of your information. 
 
@@ -22,7 +29,7 @@ No other permissions needed
 
 #### Logging
 
-No crash data is collected.
+No usage or crash data is collected.
 
 #### Cookies
 
