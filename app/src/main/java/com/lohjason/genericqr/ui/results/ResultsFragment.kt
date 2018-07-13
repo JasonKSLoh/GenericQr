@@ -99,7 +99,12 @@ class ResultsFragment : Fragment() {
             it?.let {
                 barcode = it
                 if (it.valueFormat == Barcode.TEXT) {
-                    barcode.valueFormat = ClassificationUtils.checkDataType(barcode.rawValue)
+                    if (it.format == Barcode.QR_CODE
+                            || it.format == Barcode.AZTEC
+                            || it.format == Barcode.DATA_MATRIX
+                            || it.format == Barcode.PDF417){
+                        barcode.valueFormat = ClassificationUtils.checkDataType(barcode.rawValue)
+                    }
                 }
                 val dataFormatText = ClassificationUtils.getBarcodeDataFormatString(it.valueFormat)
                 val barcodeFormatText = ClassificationUtils.getBarcodeFormatString(it.format)
