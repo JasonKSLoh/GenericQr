@@ -94,16 +94,20 @@ class VisionScannerFragment : Fragment() {
                                     .observeOn(AndroidSchedulers.mainThread())
                                     .subscribe({
                                                    if (!it) {
-                                                       Toast.makeText(context,
-                                                                      "Error storing image in temp cache. Sharing this image will not work",
-                                                                      Toast.LENGTH_SHORT).show()
+                                                       activity?.let {
+                                                           Toast.makeText(it.baseContext,
+                                                                          "Error storing image in temp cache. Sharing this image will not work",
+                                                                          Toast.LENGTH_SHORT).show()
+                                                       }
                                                    }
 
                                                }, {
                                                    Logg.d("+_", "An error Occurred: ${it.message}", it)
-                                                   Toast.makeText(context,
-                                                                  "Error storing image in temp cache. Sharing this image will not work",
-                                                                  Toast.LENGTH_SHORT).show()
+                                                   activity?.let {
+                                                       Toast.makeText(it.baseContext,
+                                                                      "Error storing image in temp cache. Sharing this image will not work",
+                                                                      Toast.LENGTH_SHORT).show()
+                                                   }
                                                })
 
                             mainViewModel.setVisionBarcode(barcode)

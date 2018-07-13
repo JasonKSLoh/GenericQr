@@ -104,29 +104,33 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showPermissionReasonDialog() {
-        AlertDialog.Builder(this@MainActivity)
-                .setTitle(getString(R.string.camera_permission_title))
-                .setMessage(getString(R.string.camera_permission_rationale))
-                .setCancelable(true)
-                .show()
+        if(!isFinishing){
+            AlertDialog.Builder(this@MainActivity)
+                    .setTitle(getString(R.string.camera_permission_title))
+                    .setMessage(getString(R.string.camera_permission_rationale))
+                    .setCancelable(true)
+                    .show()
+        }
     }
 
     private fun showOpenSettingsDialog() {
-        AlertDialog.Builder(this@MainActivity)
-                .setTitle(getString(R.string.camera_permission_title))
-                .setMessage("${getString(R.string.camera_permission_rationale)}\nOpen Settings to grant this permission?")
-                .setPositiveButton(getString(R.string.ok)) { dialog, _ ->
-                    PermissionUtils.openSettingsPage(this@MainActivity)
-                    dialog.dismiss()
-                }
-                .setNegativeButton(getString(R.string.not_now)) { dialog, _ ->
-                    Toast.makeText(this@MainActivity,
-                                   getString(R.string.settings_page_rationale),
-                                   Toast.LENGTH_SHORT).show()
-                    dialog.dismiss()
-                }
-                .setCancelable(true)
-                .show()
+        if(isFinishing){
+            AlertDialog.Builder(this@MainActivity)
+                    .setTitle(getString(R.string.camera_permission_title))
+                    .setMessage("${getString(R.string.camera_permission_rationale)}\nOpen Settings to grant this permission?")
+                    .setPositiveButton(getString(R.string.ok)) { dialog, _ ->
+                        PermissionUtils.openSettingsPage(this@MainActivity)
+                        dialog.dismiss()
+                    }
+                    .setNegativeButton(getString(R.string.not_now)) { dialog, _ ->
+                        Toast.makeText(this@MainActivity,
+                                       getString(R.string.settings_page_rationale),
+                                       Toast.LENGTH_SHORT).show()
+                        dialog.dismiss()
+                    }
+                    .setCancelable(true)
+                    .show()
+        }
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {

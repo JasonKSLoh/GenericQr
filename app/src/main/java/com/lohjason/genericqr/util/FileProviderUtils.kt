@@ -38,7 +38,7 @@ class FileProviderUtils {
                 clearCache(context)
                 val cachePath = File(context.cacheDir, PATH)
                 cachePath.mkdirs()
-                val fileName = FILENAME + SimpleDateFormat("YYYYMMddHHmmSS", Locale.getDefault()).format(Date()) + FILEEXTENSION
+                val fileName = FILENAME + SimpleDateFormat("YYYYMMddHHmmSS", Locale.US).format(Date()) + FILEEXTENSION
                 val imageFile = File(cachePath, fileName)
                 val fileOutputStream = FileOutputStream(imageFile)
                 bitmap.compress(Bitmap.CompressFormat.PNG, 100, fileOutputStream)

@@ -88,7 +88,7 @@ class HistoryAdapter(entryList: ArrayList<HistoryEntry>, checkEntrySet: HashSet<
         fun setData(historyEntry: HistoryEntry){
             tvData.text = historyEntry.data
             tvType.text = historyEntry.type
-            tvTimestamp.text = SimpleDateFormat("dd MMM YYYY", Locale.getDefault()).format(Date(historyEntry.timestamp))
+            tvTimestamp.text = SimpleDateFormat("dd MMM YYYY", Locale.US).format(Date(historyEntry.timestamp))
             checkboxDelete.isChecked = false
         }
 
