@@ -72,7 +72,7 @@ public class CameraSourcePreview extends RelativeLayout {
             try{
                 cameraSource.start(surfaceView.getHolder());
             } catch (Exception e){
-                Logg.Companion.d(LOG_TAG, e.getMessage(), e);
+                Logg.d(LOG_TAG, e.getMessage(), e);
             }
             isStartRequested = false;
         }
@@ -85,7 +85,7 @@ public class CameraSourcePreview extends RelativeLayout {
             try {
                 startIfReady();
             } catch (SecurityException se) {
-                Logg.Companion.d(LOG_TAG, "Do not have permission to start the camera", se);
+                Logg.d(LOG_TAG, "Do not have permission to start the camera", se);
             }
         }
 
@@ -148,7 +148,7 @@ public class CameraSourcePreview extends RelativeLayout {
         try {
             startIfReady();
         } catch (SecurityException se) {
-            Logg.Companion.e(LOG_TAG, "Do not have permission to start the camera", se);
+            Logg.e(LOG_TAG, "Do not have permission to start the camera", se);
         }
     }
 
@@ -161,7 +161,7 @@ public class CameraSourcePreview extends RelativeLayout {
             return true;
         }
 
-        Logg.Companion.d(LOG_TAG,"isPortraitMode returning false by default");
+        Logg.d(LOG_TAG,"isPortraitMode returning false by default");
         return false;
     }
 }
